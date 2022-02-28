@@ -9,6 +9,9 @@ const app = express();
 //use element imported
 app.use(morgan('dev'))
 
+//enable json for express
+app.use(express.json())
+
 //use router module
 app.use(stockRoute);
 
