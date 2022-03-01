@@ -4,13 +4,12 @@ const { getAllStock,
     createStock,
     deleteStock,
     updateStock, } = require('../controller/stock.controller');
-const pool = require('../db');
 
 const router = Router();
 
 router.get('/stock', getAllStock)
 
-router.get('/stock/10', getStock)
+router.get('/stock/:id', getStock)
 
 router.post('/stock', createStock)
 
